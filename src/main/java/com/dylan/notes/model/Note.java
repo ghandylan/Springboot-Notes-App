@@ -14,7 +14,7 @@ import lombok.*;
 public class Note {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+    private Long noteId;
     private String title;
     private String content;
 }

@@ -15,11 +15,11 @@ import java.util.List;
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
+    private long userId;
     private String username;
     private String password;
 
     @OneToMany(cascade = CascadeType.ALL)
-    @JoinColumn(name = "owner", referencedColumnName = "id")
+    @JoinColumn(name = "owner", referencedColumnName = "userId")
     private List<Note> notes;
 }
