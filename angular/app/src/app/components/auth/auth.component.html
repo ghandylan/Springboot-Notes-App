@@ -1,0 +1,9 @@
+<div>
+  <button (click)="showLogin = !showLogin">{{ showLogin ? 'Register' : 'Login' }}</button>
+</div>
+<div *ngIf="showLogin">
+  <app-login></app-login>
+</div>
+<div *ngIf="!showLogin">
+  <app-register></app-register>
+</div>
